@@ -42,7 +42,7 @@ chmod 666 ./22-output.txt
 cat ./22-output.txt | while read line
 do 
     echo "Current Task: ${line}"
-    proxychains4 hydra -l root -P $passfile -t 6 -vV $line ssh | grep "host:" > hydra.reslut
+    hydra -l root -P $passfile -t 6 -vV $line ssh | grep "host:"
 done
 
 echo "-------password guessing finished-------"

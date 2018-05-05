@@ -16,11 +16,11 @@ do
         shift  
         ;;  
     -f)  
-        nmap -vv -n -sS -p22 -iL $2  | grep "Discovered open port" | awk {'print $6'} | awk -F/ {'print $1'} > ./22-output.txt
+        nmap -vv -n -sS -sU -p22 -iL $2  | grep "Discovered open port" | awk {'print $6'} | awk -F/ {'print $1'} > ./22-output.txt
         shift  
         ;;  
     -l)  
-        nmap -vv -n -sS -p22 $2  | grep "Discovered open port" | awk {'print $6'} | awk -F/ {'print $1'} > ./22-output.txt 
+        nmap -vv -n -sS -sU -p22 $2  | grep "Discovered open port" | awk {'print $6'} | awk -F/ {'print $1'} > ./22-output.txt 
         shift  
         ;; 
     *)  

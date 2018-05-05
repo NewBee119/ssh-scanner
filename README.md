@@ -18,4 +18,4 @@ ssh password guessing，ssh登录密码破解
 https://github.com/danielmiessler/SecLists/tree/master/Passwords  
 
 注意：  
-    在测试过程中，会出现开了端口确连接不了的错误，程序会打印出来，这是正常现象，可以忽略。
+    在测试过程中，会出现开了端口却连接不了的错误，程序会打印出来，这是正常现象，可以忽略。

@@ -15,4 +15,7 @@ ssh password guessing，ssh登录密码破解
 ![Image test](https://github.com/scu-igroup/ssh-scanner/blob/master/image/22-pass.gif)   
   
 密码本见：  
-https://github.com/danielmiessler/SecLists/tree/master/Passwords
+https://github.com/danielmiessler/SecLists/tree/master/Passwords  
+
+注意：  
+    在测试过程中，会出现开了端口确连接不了的错误，程序会打印出来，这是正常现象，可以忽略。

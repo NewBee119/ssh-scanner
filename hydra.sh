@@ -4,6 +4,7 @@ if [ $# -lt 4 ]
 then
    echo "usage: ./hydra.sh -p ./password.txt -f ./iplist.txt"
    echo "usage: ./hydra.sh -p ./password.txt -l 192.168.9.0/24"
+   echo "usage: ./hydra.sh -p ./password.txt -r 10000"
    exit 1
 fi
 
@@ -23,6 +24,10 @@ do
         nmap -vv -n -sS -sU -p22 $2  | grep "Discovered open port" | awk {'print $6'} | awk -F/ {'print $1'} > ./22-output.txt 
         shift  
         ;; 
+    -r)
+	nmap -vv -n -sS -sU -p22 -iR $2  | grep "Discovered open port" | awk {'print $6'} | awk -F/ {'print $1'} > ./22-output.txt
+	shift
+	;;
     *)  
         echo "$1 is not an option"  
         echo "usage: ./hydra.sh -p ./password.txt -f ./iplist.txt"
